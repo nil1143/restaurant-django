@@ -1,9 +1,13 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-
-# Create your views here.
 from .models import Reservation
+from .forms import ReservationForm
+# Create your views here.
 
 
 def reserve_table(request):
-    return HttpResponse("Hello, page!")
+
+    reservation_form = ReservationForm()
+
+    return render(request, "reservation.html", {
+        "reservation_form": reservation_form,
+    })

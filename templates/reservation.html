@@ -1,0 +1,12 @@
+{% extends "base.html" %} {% block content %} {% load static %}
+
+<!-- content starts here -->
+<div class="col-12  my-5">
+  <h2>Let's reserve the table!!</h2>
+  <form method="post">
+    {% csrf_token %} {{ reservation_form }}
+    <button class="btn btn-secondary" type="submit">Submit</button>
+  </form>
+</div>
+<!-- content ends here -->
+{% endblock %}
