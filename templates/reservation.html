@@ -1,12 +1,18 @@
-{% extends "base.html" %} {% block content %} {% load static %}
+{% extends "base.html" %}  {% load static %}
 
+{% block content %}
 <!-- content starts here -->
-<div class="col-12  my-5">
+<!-- <div class="col-12 my-5"> -->
+<div class="d-block my-5 justify-content-center">
   <h2>Let's reserve the table!!</h2>
-  <form method="post">
-    {% csrf_token %} {{ reservation_form }}
-    <button class="btn btn-secondary" type="submit">Submit</button>
-  </form>
+  <br />
+  <div class="form-group">
+    <form method="POST">
+      {% csrf_token %} {{ reservation_form }}
+      <button class="btn btn-secondary" type="submit">Submit</button>
+    </form>
+  </div>
 </div>
+<!-- </div> -->
 <!-- content ends here -->
-{% endblock %}
+{% endblock content %}

@@ -1,4 +1,5 @@
 main {
-    background: url('/static/assets/home.png') no-repeat fixed;
-    height: 100vw;
+    /* background: url('/static/assets/home.png') no-repeat fixed; */
+    background: #4b4848;
+    /* height: 600px; */
 }
