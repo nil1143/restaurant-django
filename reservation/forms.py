@@ -1,8 +1,14 @@
 from .models import Reservation
 from django import forms
 
-# from django.forms import ModelForm, TextInput, EmailInput
 
+# from django.forms import ModelForm, TextInput, EmailInput
+class DateInput(forms.DateInput):
+    input_type = "date"
+
+# class TimeInput(forms.TimeInput):
+#     input_type = "time"
+    
 
 class ReservationForm(forms.ModelForm):
     class Meta:
@@ -38,7 +44,7 @@ class ReservationForm(forms.ModelForm):
                     "placeholder": "Number of persons",
                 }
             ),
-            "date": forms.DateInput(
+            "date": DateInput(
                 attrs={
                     "class": "form-control",
                     "style": "max-width: 300px;",
@@ -50,6 +56,7 @@ class ReservationForm(forms.ModelForm):
                     "class": "form-control",
                     "style": "max-width: 300px;",
                     "placeholder": "Time",
-                }
+                    "type": "time"
+                }, 
             ),
         }
