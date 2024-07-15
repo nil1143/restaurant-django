@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+<!-- content starts here -->
+<!-- <div class="col-12 my-5"> -->
+    <h1>Reservation list</h1>
+    {% for post in object_list %}
+    <h2>{{post.title}}</h2>
+    <p>{{post.excerpt}}</p>
+    <p>Author: {{post.author}}</p>
+    {% endfor %}
+
+<!-- </div> -->
+<!-- content ends here -->
+{% endblock content %}

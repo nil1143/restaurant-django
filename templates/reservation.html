@@ -1,4 +1,8 @@
-{% extends "base.html" %} {% load static %} {% block content %}
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
 <!-- content starts here -->
 <!-- <div class="col-12 my-5"> -->
 <div class="container my-5">
@@ -6,7 +10,8 @@
   <br />
   <div class="form-group">
     <form method="POST">
-      {% csrf_token %} {{ reservation_form }}
+      {% csrf_token %}
+      {{ reservation_form }}
       <button class="btn btn-secondary mt-3" type="submit">Submit</button>
     </form>
   </div>
