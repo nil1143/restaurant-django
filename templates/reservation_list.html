@@ -6,10 +6,10 @@
 <!-- content starts here -->
 <!-- <div class="col-12 my-5"> -->
     <h1>Reservation list</h1>
-    {% for post in object_list %}
-    <h2>{{post.title}}</h2>
-    <p>{{post.excerpt}}</p>
-    <p>Author: {{post.author}}</p>
+    {% for reservation in reservation_list %}
+    <h2>{{reservation.name}}</h2>
+    <p>{{reservation.date}}</p>
+    <p>Author: {{reservation.time}}</p>
     {% endfor %}
 
 <!-- </div> -->
