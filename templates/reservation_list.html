@@ -1,17 +1,22 @@
-{% extends "base.html" %}
-
-{% load static %}
-
-{% block content %}
+{% extends "base.html" %} {% load static %} {% block content %}
 <!-- content starts here -->
-<!-- <div class="col-12 my-5"> -->
-    <h1>Reservation list</h1>
+<div class="container">
+  <h1>Reservation list</h1>
+  <div class="col-12 mt-3 left">
     {% for reservation in reservation_list %}
-    <h2>{{reservation.name}}</h2>
-    <p>{{reservation.date}}</p>
-    <p>Author: {{reservation.time}}</p>
-    {% endfor %}
 
-<!-- </div> -->
+    <div class="card mb-4" style="width: 18rem">
+      <div class="card-body">
+        <h3 class="card-title">Name: {{reservation.name}}</h3>
+        <p class="card-text">Date: {{reservation.date}}</p>
+        <p class="card-text">Time: {{reservation.time}}</p>
+        <a href="#" class="card-link">Edit</a>
+        <a href="#" class="card-link">Delete</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
 <!-- content ends here -->
 {% endblock content %}
