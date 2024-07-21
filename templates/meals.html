@@ -1,0 +1,13 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<!-- content starts here -->
+<div class="container">
+  <h1>Meals</h1>
+
+  {% for meal in meal_list %}
+  <h3 class="card-title">Name: {{meal.name}}</h3>
+  <p class="card-text">Date: {{meal.type}}</p>
+  {% endfor %}
+</div>
+
+<!-- content ends here -->
+{% endblock content %}
