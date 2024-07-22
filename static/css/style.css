@@ -3,3 +3,15 @@ main {
     background: #4b4848;
     /* height: 600px; */
 }
+
+.meal-image {
+    display: flex;
+    width: 300px;
+    height: auto;
+}
+
+/* .card {
+    display: flex;
+    width: 330px;
+    height: auto;
+} */

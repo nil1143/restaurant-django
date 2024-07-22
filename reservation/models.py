@@ -10,6 +10,5 @@ class Reservation(models.Model):
     date = models.DateField()
     time = models.TimeField()
 
-
     def __str__(self):
         return f"Reservation by {self.name}"
